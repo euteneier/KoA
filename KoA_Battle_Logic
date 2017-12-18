@@ -1,0 +1,102 @@
+Introduction
+
+With the release of update 2.2.0 of King of Avalon a tweak to the Battle Logic was announced. 
+This guide explains the tweak and shares some ideas about how the Combat Engine could work.
+
+Battle Logic Tweak
+
+The tweak to the Battle Logic per update 2.2.0 is that Dragon Skills, Lord Equipment, Research, 
+Talent points etc of all participants rallying or reinforcing will contribute to the overall result! 
+(In previous versions only the battle benefits of the war leader were counted.)
+
+Battle Logic Tweak Explained
+
+In the old situation whenever someone joined a rally or reinforced, they did not have to worry about 
+their boosts/benefits at all, for example your talent points and equipment could be set for resource 
+production. I you joined a rally, you would get the boosts/benefits from the rally leader, if you 
+reinforced, you would get the boosts/benefits from the player you are reinforcing.
+
+In the new situation the announcement indicates that your boosts/benefits "will contribute to the 
+overall result" when you join a rally or reinforce, but it is not specific about how. I have done some 
+experiments, but the reporting does not seem to have changed, it is currently still the case that both 
+rally leaders and rally fillers see the same boosts/benefits the rally leader would have if he did a 
+solo attack.
+
+So it is unclear how exactly the boosts/benefits from the rally fillers contribute, but they contribute, 
+for this reason it is now important that rally fillers also make sure their lord is wearing the right 
+equipment, the dragon is included and skills are set, and talent points are set for combat.
+
+Sharing Rally Experience
+
+I have done some analysis of a situation where a group of players rally a high level castle (in this case 
+the target was too strong and the attackers lost more than they killed). I want to share some findings so 
+others can benefit from this. This was done before the battle logic changed, but since the recent change 
+was introduced as a optimization of the existing battle logic, I believe the bulk of the way it works has 
+not changed.
+
+Both losses and kills were distributed evenly based on total troop amounts of each type. An example to 
+illustrate. In a rally there were 3 people contributing different amounts of Double Crossbowmen: 12784, 2923, 
+415. Each of these players killed roughly 0.32 troops for each Double Crossbowmen they contributed, and they 
+each lost 64% of their Double Crossbowmen.
+
+Considering all troops types, either all troops of a type were killed, or all troops survived, and only for 
+one troop type part survived and part was killed. This suggests there is a certain order of troops types. In 
+this situation we attacked with troops of tier 7 and lower. All cavalry and infantry troops were killed, and 
+lower tier bowmen and siege were also killed completely. The tier 6 and tier 7 troops survived, as well as the 
+tier 6 bowmen. The tier 5 bowmen, the Double Crossbowmen, were the only troop type that partly survived. What 
+the exact order is in which troop types and tiers die is not yet clear to me, but it is clear it does not (just) 
+depend on one of the key stats like HP or Defense. Interesting is that the Tier 7 Bowmen troops died before the 
+Tier 5 and 6 Bowmen.
+
+Additional note: I analyzed a few more battle reports and the one I did the analysis on for this guide is atypical 
+in the sense that we as attackers were overwhelmed by the defenders and that caused some types of troops to be 
+killed of completely. Looking at another rally, in which we suffered 26000 losses and had 60000 kills, I noticed 
+that for each troop type (infantry, bowmen, cavalry, siege) there was one troop tier that got partially killed, the 
+rest either survived all or were lost all. This suggests that for each troop type there is an order in which the troop 
+tiers die (potentially depending on the troop composition of the defender).
+
+Concerning the kills, in general the Bowmen have the highest kill ratio (number of kills per number of troops), followed 
+by Cavalry, followed by Infantry. For Siege the kill ratio is very different for the different tiers.
+
+These kills and losses are likely influenced by the enemy troop compositions to some extend, so don't see it as hard 
+evidence to do one way or another.
+
+Tips
+
+No matter the recent change in Battle Logic it is still best to have your strongest players (highest level Hall of War, 
+best research, best equipment etc) as rally leader, as his contribution to the rally will still be more significant than 
+the fillers.
+
+Infantry is a buffer. Although they themselves do very little kills, without infantry your other troops are wiped out a 
+lot faster. It is best to have a combination of all troops, and let the amount of Infantry depend on the strength between 
+you as attacker and defender. The stronger you are as your target, the fewer Infantry troops you need.
+
+In case a defender has a lot of traps, you might consider having Rams or Towers to absorb the damage from the traps, or 
+Distance Siege for increased attack against traps.
+
+Similarly you might also let your troop composition depend on the troop setup of your opponent, e.g. if the defender has 
+a lot of spearmen, you might put extra Crossbowmen that do increased attack against spearmen, and also take into 
+consideration that Spearmen have an increased defense against Light Cavalry.
+
+You will likely lose most Infantry in combat and you want to prevent from being forced into situations in which you need 
+to attack, but you don't have enough Infantry to function as buffer, so make sure you train plenty of Infantry troops.
+
+If different rally participants have different troop compositions, they will have different losses. It is good to keep 
+this in mind and keep things fair. Likely it will lead to unhappy situations if one person provides all infantry and 
+cavalry, and has heavy losses with little kills, while another has just bowmen and has little losses and huge amount of 
+kills. It is good to discuss rally compositions upfront and potentially let players use their Army Formation presets.
+
+(Alliance) Hospitals
+
+I did not fully understand when troops would end up in the Alliance Hospital. I mistakenly assumed that attacking a City 
+that invaded our Alliance Territory would still cause my troops to end up in the Alliance Hospital, but this was clearly 
+wrong. The Alliance Hospital is purely an extension of your own hospitals. If your own hospital capacity is full, your 
+troops will go to the Alliance Hospital when lost in battle. Troops do not go to the hospital if lost while attacking a 
+city, but they do go to the hospital when lost during defending (including reinforcing), attacking monsters, or attacking 
+enemies on a tile. This is a good reason to be extra careful when attacking instead of defending, typically strong players 
+can teleport to hive, but they limit their attack to much weaker players and hope that players closer to their strength will 
+attack them, possible even by a rally, in which case they have the benefit of the large number of troops and the use of hospitals.
+
+Conclusion
+
+This is just a start, but I hope this gives a bit more insight in the battle logic and will give some tips.
